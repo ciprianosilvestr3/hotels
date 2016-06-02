@@ -432,7 +432,7 @@
                             </form>                         
                         </li>-->
                         <li class="nav-item start active open">
-                            <a href="<?=base_url();?>index.php/view/hoteles" class="nav-link nav-toggle">
+                            <a href="#" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
                                 <span class="title">Hoteles</span>
                                 <span class="selected"></span>
@@ -440,9 +440,9 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item start active open">
-                                    <a href="index.html" class="nav-link ">
+                                    <a href="<?=base_url();?>index.php/hoteles" class="nav-link ">
                                         <i class="icon-bar-chart"></i>
-                                        <span class="title">Dashboard 1</span>
+                                        <span class="title">Hoteles</span>
                                         <span class="selected"></span>
                                     </a>
                                 </li>

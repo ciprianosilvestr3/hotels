@@ -1,5 +1,4 @@
 <?php
-<?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Hoteles extends CI_Controller {
@@ -25,7 +24,7 @@ class Hoteles extends CI_Controller {
 
 	public function index()
 	{
-		$this->layout->view('inicio');	
+		$this->layout->view('hoteles');	
 	}
 
 }
