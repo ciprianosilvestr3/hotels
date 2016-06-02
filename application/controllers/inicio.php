@@ -78,7 +78,7 @@ class Inicio extends CI_Controller {
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item start">
-                                    <a href="<?=base_url();?>index.php/hoteles" class="nav-link ">
+                                    <a href="'.base_url().'index.php/hoteles" class="nav-link ">
                                         <i class="icon-bar-chart"></i>
                                         <span class="title">Hoteles</span>
                                         <span class="selected"></span>
