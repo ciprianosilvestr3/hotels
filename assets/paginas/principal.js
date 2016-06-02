@@ -44,7 +44,6 @@ var mierror = function (jqXHR, textStatus, errorThrown) {
 
 peticiones('GET',base_url+'index.php/inicio/menu','JSON',$('#sinnombre').serializeObject(),function(data)
 	{
-
 $('#ulmenu').html(data.menu);
 console.log(data.menu);
 
