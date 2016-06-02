@@ -19,10 +19,10 @@ var Login = function () {
 
 	            messages: {
 	                username: {
-	                    required: "Username is required."
+	                    required: "Usuario requerido."
 	                },
 	                password: {
-	                    required: "Password is required."
+	                    required: "Contraseña requerida."
 	                }
 	            },
 
@@ -42,21 +42,20 @@ var Login = function () {
 
 	            errorPlacement: function (error, element) {
 	                error.insertAfter(element.closest('.input-icon'));
-	            },
-
-	            submitHandler: function (form) {
-	                form.submit();
 	            }
+	            //,
+
+	            //submitHandler: function (form) {
+	              //  form.submit();
+	            //}
 	        });
 
-	        $('.login-form input').keypress(function (e) {
-	            if (e.which == 13) {
-	                if ($('.login-form').validate().form()) {
-	                    $('.login-form').submit();
-	                }
-	                return false;
-	            }
-	        });
+	       
+
+	        
+
+
+
 	}
 
 	var handleForgetPassword = function () {
@@ -96,9 +95,9 @@ var Login = function () {
 	                error.insertAfter(element.closest('.input-icon'));
 	            },
 
-	            submitHandler: function (form) {
-	                form.submit();
-	            }
+	           // submitHandler: function (form) {
+	             //   form.submit();
+	            //}
 	        });
 
 	        $('.forget-form input').keypress(function (e) {
@@ -254,12 +253,7 @@ var Login = function () {
             handleRegister();    
 
             // init background slide images
-		    $.backstretch([
-		        "../assets/pages/media/bg/1.jpg",
-		        "../assets/pages/media/bg/2.jpg",
-		        "../assets/pages/media/bg/3.jpg",
-		        "../assets/pages/media/bg/4.jpg"
-		        ], {
+		   $.backstretch(["http://creandodm.com/wp-content/uploads/2016/01/banner_a1.jpg","http://creandodm.com/wp-content/uploads/2016/01/banner_a.jpg","http://creandodm.com/wp-content/uploads/2016/01/banner_b.jpg","http://creandodm.com/wp-content/uploads/2016/01/bg_01.jpg?id=598"], {
 		          fade: 1000,
 		          duration: 8000
 		    	}

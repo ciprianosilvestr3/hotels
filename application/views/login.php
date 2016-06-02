@@ -108,6 +108,11 @@
 <script src="<?=base_url(); ?>assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
         <!-- BEGIN CORE PLUGINS -->
+        <script type="text/javascript">
+            
+var base_url = '<?=base_url(); ?>';
+
+        </script>
         <script src="<?=base_url(); ?>assets/global/plugins/jquery.min.js" type="text/javascript"></script>
         <script src="<?=base_url(); ?>assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="<?=base_url(); ?>assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
@@ -127,16 +132,16 @@
         <script src="<?=base_url(); ?>assets/global/scripts/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="<?=base_url(); ?>assets/pages/scripts/login-4.min.js" type="text/javascript"></script>
+        <script src="<?=base_url(); ?>assets/pages/scripts/login-4.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <!-- END THEME LAYOUT SCRIPTS -->
-                <script type="text/javascript">
+        <script type="text/javascript">
 
-            $('#iniciarsesion').on('click',function(){
-                $.ajax({
+var peticion = function (){
+    $.ajax({
                             type: "POST",
-                            url: "<?=base_url(); ?>index.php/login/accesar",
+                            url: base_url + "index.php/login/accesar",
                             dataType:"JSON",
                             data: {
                                 
@@ -162,13 +167,33 @@
                                 }
                             }
                         });
+}
+
+
+             $('#iniciarsesion').click(function(){
+            if ($('.login-form').valid()) {
+
+               peticion();
+            }
                 
                 
                });
 
 
+              $('.login-form input').keypress(function (e) {
+                if (e.which == 13) {
+                    if ($('.login-form').valid()) {
+
+                peticion();
+            }
+                    return false;
+                }
+            });
+
+
 
         </script>
+       
     </body>
 
 </html>
