@@ -39,7 +39,9 @@ class Inicio extends CI_Controller {
 	public function index()
 	{
 		
-	$this->layout->view('inicio');	
+	  $this->load->library('session');
+	  $session_data = $this->session->userdata('creand6_token');
+	  $this->layout->view('inicio',$session_data);
 	}
 	
 	
