@@ -39,7 +39,7 @@
                 <!-- BEGIN LOGO -->
                 <div class="page-logo">
                     <a href="index.html">
-                        <img src="<?=base_url(); ?>assets/layouts/layout/img/logo2.png" alt="logo" class="logo-default" /> </a>
+                        <img src="<?=base_url(); ?>assets/layouts/layout/img/logo.png" alt="logo" class="logo-default" /> </a>
                     <div class="menu-toggler sidebar-toggler"> </div>
                 </div>
                 <!-- END LOGO -->
