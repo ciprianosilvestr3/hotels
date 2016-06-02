@@ -27,6 +27,7 @@ class Hoteles extends CI_Controller {
 	public function index()
 	{
 		$session_data = $this->session->userdata('creand6_token');
+<<<<<<< HEAD
 
 		$this->layout->view('hoteles',$session_data);	
 
@@ -39,6 +40,9 @@ class Hoteles extends CI_Controller {
 		);
 		$this->layout->view('hoteles',$parametros);	
 
+=======
+		$this->layout->view('hoteles',$session_data);	
+>>>>>>> 20ded7f48d332d95a317d83cb8e783652cc50b86
 	}
 
 }
