@@ -66,7 +66,7 @@ class Login extends CI_Controller {
 							$sess_data = array(
 										  	'idusuario' =>$datosUsuarios['id'],
 											'usuario'=>$datosUsuarios['usuario'],
-											//'tipo'=>$tipo,
+											'tipo'=>$datosUsuarios['perfil'],
 											'nombre'=>$datosUsuarios['nombre']);
 											
 											//error_log(print_r($sess_data));

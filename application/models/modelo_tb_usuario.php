@@ -75,9 +75,13 @@ class Modelo_tb_usuario extends CI_Model
 		// return false;
 	
 
-		    $this->db->select('u.id as id,u.nombre as nombre,u.email,u.fecha_registro as fecha_registro,u.estatus as estatus,u.foto,s.nombre as nombre_sucursal,u.usuario');
+		    $this->db->select('u.id as id,u.nombre as nombre,u.email,u.fecha_registro as fecha_registro,u.estatus as estatus,u.foto,s.nombre as nombre_sucursal,u.usuario,p.nombre as perfil,p.nombre as perfil');
             $this->db->from('usuarios as u');
+
+
             $this->db->join('sucursales as s', 'u.sucursales_id = s.id_sucursal');
+            $this->db->join('usuarios_perfiles as up' , 'u.id=up.usuario_id');
+            $this->db->join('perfiles as p','p.id=up.perfil_id');
             $this->db->where('u.usuario',$usuario);	
             $query = $this->db->get();
             //error_log(print_r($query));
